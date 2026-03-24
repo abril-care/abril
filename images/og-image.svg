@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#002020"/>
+      <stop offset="50%" style="stop-color:#025E5D"/>
+      <stop offset="100%" style="stop-color:#B0F1E7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Flower logo -->
+  <g transform="translate(600, 250) scale(4)" fill="none" stroke="#F9B4D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 -4.5a4.5 4.5 0 1 1 4.5 4.5M0 -4.5A4.5 4.5 0 1 0 -4.5 0M0 -4.5V-3m-4.5 3a4.5 4.5 0 1 0 4.5 4.5M-4.5 0H-3m7.5 0a4.5 4.5 0 1 1-4.5 4.5m4.5-4.5H3m-3 4.5V3"/>
+    <circle cx="0" cy="0" r="3"/>
+    <path d="m-4 4 1.5-1.5"/>
+    <path d="M2.5 -2.5 4 -4"/>
+    <path d="m-4 -4 1.5 1.5"/>
+    <path d="M2.5 2.5 4 4"/>
+  </g>
+
+  <!-- Text -->
+  <text x="600" y="380" text-anchor="middle" font-family="system-ui, sans-serif" font-size="72" font-weight="800" fill="white">Abril</text>
+  <text x="600" y="440" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" fill="rgba(255,255,255,0.8)">The Infrastructure Layer for the Care Economy</text>
+
+  <!-- URL -->
+  <text x="600" y="580" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" fill="rgba(255,255,255,0.6)">abrilcare.com</text>
+</svg>

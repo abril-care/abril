@@ -1,0 +1,6 @@
+# Abril - abrilcare.com
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://abrilcare.com/sitemap.xml
