@@ -351,11 +351,11 @@
            HERO SECTION
         ═══════════════════════════════════════════ */
         .hero {
-            min-height: 100vh;
+            min-height: auto;
             background: var(--gradient-hero);
-            padding: 140px 0 100px;
+            padding: 140px 0 80px;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
 
         .hero::before {
@@ -1617,20 +1617,8 @@
             stat.style.transitionDelay = `${i * 150}ms`;
         });
 
-        // Subtle parallax on hero section
+        // Mouse move effect on hero (subtle)
         const hero = document.querySelector('.hero');
-        const heroContent = document.querySelector('.hero-content');
-
-        window.addEventListener('scroll', () => {
-            const scrolled = window.scrollY;
-            if (scrolled < window.innerHeight) {
-                const parallax = scrolled * 0.3;
-                heroContent.style.transform = `translateY(${parallax}px)`;
-                heroContent.style.opacity = 1 - (scrolled / (window.innerHeight * 1.5));
-            }
-        });
-
-        // Mouse move effect on hero
         hero.addEventListener('mousemove', (e) => {
             const rect = hero.getBoundingClientRect();
             const x = (e.clientX - rect.left) / rect.width - 0.5;
