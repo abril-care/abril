@@ -1551,7 +1551,7 @@
         }, observerOptions);
 
         // Observe all animatable elements
-        document.querySelectorAll('.problem-card, .feature-card, .flow-item, .flow-center-box, .stat-item, .section-title, .section-subtitle, .hero-stat').forEach(el => {
+        document.querySelectorAll('.problem-card, .feature-card, .flow-item, .flow-center-box, .stat-item, .section-title, .section-subtitle').forEach(el => {
             el.classList.add('fade-up');
             observer.observe(el);
         });
@@ -1626,7 +1626,7 @@
             if (scrolled < window.innerHeight) {
                 const parallax = scrolled * 0.3;
                 heroContent.style.transform = `translateY(${parallax}px)`;
-                heroContent.style.opacity = 1 - (scrolled / (window.innerHeight * 0.8));
+                heroContent.style.opacity = 1 - (scrolled / (window.innerHeight * 1.5));
             }
         });
 
