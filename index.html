@@ -140,29 +140,32 @@
         }
 
         /* ═══════════════════════════════════════════
-           NAVIGATION - Plaid-inspired clean header
+           NAVIGATION - Plaid-inspired floating header
         ═══════════════════════════════════════════ */
         nav {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 1000;
-            padding: 0;
+            width: calc(100% - 32px);
+            max-width: 1200px;
             background: #ffffff;
-            border-bottom: 1px solid #EAEFF0;
-            transition: box-shadow 0.2s ease;
+            border-radius: 100px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.2s ease, top 0.2s ease;
         }
 
         nav.scrolled {
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 32px rgba(0, 0, 0, 0.12);
         }
 
         .nav-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 72px;
+            height: 64px;
+            padding: 0 8px 0 24px;
         }
 
         .nav-logo {
@@ -220,15 +223,6 @@
             transition: all 0.15s ease;
             cursor: pointer;
             border: none;
-        }
-
-        .nav-btn-secondary {
-            color: var(--gray-800);
-            background: transparent;
-        }
-
-        .nav-btn-secondary:hover {
-            background: var(--gray-100);
         }
 
         .nav-btn-primary {
@@ -1251,28 +1245,24 @@
 <body>
     <!-- Navigation -->
     <nav id="nav">
-        <div class="container">
-            <div class="nav-inner">
-                <a href="#" class="nav-logo">
-                    <img src="images/logo-small.svg" alt="Abril" class="nav-logo-img">
-                    Abril
-                </a>
-                <div class="nav-links">
-                    <a href="#problem">Problem</a>
-                    <a href="#solution">Solution</a>
-                    <a href="#features">Features</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="nav-cta">
-                    <a href="#contact" class="nav-btn nav-btn-secondary">Contact</a>
-                    <a href="#contact" class="nav-btn nav-btn-primary">Get Started</a>
-                </div>
-                <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Open menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                </button>
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <img src="images/logo-small.svg" alt="Abril" class="nav-logo-img">
+                Abril
+            </a>
+            <div class="nav-links">
+                <a href="#problem">Problem</a>
+                <a href="#solution">Solution</a>
+                <a href="#features">Features</a>
             </div>
+            <div class="nav-cta">
+                <a href="#contact" class="nav-btn nav-btn-primary">Talk To Us</a>
+            </div>
+            <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Open menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
         </div>
     </nav>
 
